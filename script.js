@@ -114,50 +114,54 @@ if (resetTextStyleBtn) {
 }
 
 // Form Validation
-document.getElementById('contactForm').addEventListener('submit', (event) => {
-    event.preventDefault(); // Prevent the form from submitting normally
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const errors = [];
-    const successSection = document.getElementById('success'); // Get the success div
-    const errorSection = document.getElementById('errors'); // Get the error section
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const name = document.getElementById('name')?.value.trim();
+        const email = document.getElementById('email')?.value.trim();
+        const phone = document.getElementById('phone')?.value.trim();
+        const errors = [];
+        const successSection = document.getElementById('success');
+        const errorSection = document.getElementById('errors');
 
-    // Clear previous messages
-    errorSection.innerHTML = '';
-    successSection.innerHTML = '';
+        // Clear previous messages
+        errorSection.innerHTML = '';
+        successSection.innerHTML = '';
 
-    if (!name) errors.push('Name is required');
-    
-    // Email Validation
-    if (!email || !/^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/.test(email)) {
-        errors.push('A valid email address is required.');
-    }
+        if (!name) errors.push('Name is required');
 
-    // Phone Validation: Must be numeric and at least 10 digits
-    if (!/^\d{10,}$/.test(phone.trim())) {
-        errors.push('Phone number must be at least 10 digits long and contain only numbers.');
-    }
+        if (!email || !/^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+            errors.push('A valid email address is required.');
+        }
 
-    if (errors.length > 0) {
-        errorSection.innerHTML = errors.map(err => `<p>${err}</p>`).join('');
-    } else {
-        successSection.innerHTML = '<p>Form submitted successfully!</p>';
-        document.getElementById('contactForm').reset();
-    }
-});
+        if (!/^\d{10,}$/.test(phone)) {
+            errors.push('Phone number must be at least 10 digits long and contain only numbers.');
+        }
 
-
-// Toggle Menu
-const toggleButton = document.querySelector('.toggle-button');
-if (toggleButton) {
-    toggleButton.addEventListener('click', () => {
-        const navbarLinks = document.querySelector('.navbar-links');
-        if (navbarLinks) {
-            navbarLinks.classList.toggle('active');
+        if (errors.length > 0) {
+            errorSection.innerHTML = errors.map(err => `<p>${err}</p>`).join('');
+        } else {
+            successSection.innerHTML = '<p>Form submitted successfully!</p>';
+            contactForm.reset();
         }
     });
 }
+
+// Toggle Menu
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.querySelector('.toggle-button');
+    const navbarLinks = document.querySelector('.navbar-links');
+
+    if (toggleButton && navbarLinks) {
+        toggleButton.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active');
+            console.log('Menu toggled!'); // Debugging: Check if this runs
+        });
+    } else {
+        console.error('Toggle button or navbar links not found!');
+    }
+});
 
 // Toggle Details Section Visibility
 const detailsSection = document.getElementById('detailsSection');

@@ -679,7 +679,7 @@ textarea {
         position: absolute;
         top: 100%;
         right: 0;
-        width: 200px;
+        width: 100px;
         padding: 1rem 0;
         border-radius: 5px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -695,13 +695,23 @@ textarea {
     }
 
     .navbar-links ul li a {
-        padding: 1rem;
+        padding: 0.5rem;
+        font-size: 0.9rem;
         text-align: center;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 0;
+    }
+    
+    .navbar-links ul li:last-child a {
+        border-bottom: none; /* Remove bottom border from the last item */
     }
 
     .toggle-button {
         display: block;
+        position: absolute;
+        top: 10px; /* Adjust vertical positioning */
+        right: 35px; /* Shift the toggle button slightly inward */
+        z-index: 2; /* Ensure it stays above the dropdown menu */
     }
 
     .navbar-container {
