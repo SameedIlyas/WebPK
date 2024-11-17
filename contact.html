@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Web PK</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container navbar-container">
+                <a class="brand" href="index.html">Web PK</a>
+                <!-- Toggle Button for Mobile Menu -->
+                <button class="toggle-button" aria-label="Toggle Navigation" onclick="toggleMenu()">☰</button>
+                <!-- Navbar Links -->
+                <div class="navbar-links">
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="services.html" class="nav-link">Services</a></li>
+                        <li><a href="courses.html" class="nav-link">Courses</a></li>
+                        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>We’d love to hear from you! Reach out with any questions or project inquiries.</p>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact-form-section" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">Get in Touch</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Select Service:</label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="website">Website Design & Development</option>
+                            <option value="logo">Logo Design</option>
+                            <option value="domain">Domain Setup</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Write your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Submit</button>
+                </form>
+                <div id="errors" class="error-messages"></div>
+                <div id="success" class="success-messages"></div>
+            </div>
+        </section>
+
+        <!-- Contact Info Section -->
+        <section id="contact-info-section" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">Contact Information</h2>
+                <p><strong>Email:</strong> info@webpk.com</p>
+                <p><strong>Phone:</strong> +92 123 456 7890</p>
+                <p><strong>Address:</strong> 123 Web Street, Tech City, Pakistan</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="index.html" class="brand">Web PK</a>
+                <p>&copy; 2024 Web PK. All rights reserved.</p>
+            </div>
+            <div class="footer-middle">
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">Instagram</a>
+            </div>
+        </div>
+    </footer>
+            <!-- Floating Change Background Button -->
+    <button id="changeBgBtn" class="floating-btn" onclick="toggleBackground()">☰</button>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+

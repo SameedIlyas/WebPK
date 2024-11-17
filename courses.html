@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="container navbar-container">
+                <a class="brand" href="index.html">Web PK</a>
+                <!-- Toggle Button for Mobile Menu -->
+                <button class="toggle-button" aria-label="Toggle Navigation" onclick="toggleMenu()">
+                    ☰
+                </button>
+                <!-- Navbar Links -->
+                <div class="navbar-links">
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="services.html" class="nav-link">Services</a></li>
+                        <li><a href="courses.html" class="nav-link active">Courses</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Explore Our Courses</h1>
+        <p>Unlock your potential with our expertly designed courses.</p>
+        <a href="#courses-list" class="btn">Browse Courses</a>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses-list" class="section-padding">
+        <h2 class="section-title">Available Courses</h2>
+        <div class="services-grid">
+            <!-- Course Card 1 -->
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>Learn the essentials of web development, including HTML, CSS, and JavaScript.</p>
+                <button class="btn-secondary">Enroll Now</button>
+            </div>
+            <!-- Course Card 2 -->
+            <div class="card">
+                <h3>Data Science</h3>
+                <p>Master data analysis, machine learning, and visualization techniques.</p>
+                <button class="btn-secondary">Enroll Now</button>
+            </div>
+            <!-- Course Card 3 -->
+            <div class="card">
+                <h3>Graphic Design</h3>
+                <p>Explore the fundamentals of graphic design using modern tools and techniques.</p>
+                <button class="btn-secondary">Enroll Now</button>
+            </div>
+            <!-- Add more courses as needed -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="index.html" class="brand">Web PK</a>
+                <p>&copy; 2024 Web PK. All rights reserved.</p>
+            </div>
+            <div class="footer-middle">
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    
+        <!-- Floating Change Background Button -->
+    <button id="changeBgBtn" class="floating-btn" onclick="toggleBackground()">☰</button>
+
+    <script href="script.js"></script>
+</body>
+</html>
+

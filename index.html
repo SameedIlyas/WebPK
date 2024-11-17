@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web PK - Professional Web Design & Development</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+	<header>
+	    <nav class="navbar">
+		<div class="container navbar-container">
+		    <a class="brand" href="index.html">Web PK</a>
+		    <!-- Toggle Button for Mobile Menu -->
+		    <button class="toggle-button" aria-label="Toggle Navigation" onclick="toggleMenu()">
+		        ☰
+		    </button>
+		    <!-- Navbar Links -->
+		    <div class="navbar-links">
+		        <ul>
+		            <li><a href="index.html" class="nav-link active">Home</a></li>
+		            <li><a href="about.html" class="nav-link">About</a></li>
+		            <li><a href="services.html" class="nav-link">Services</a></li>
+		            <li><a href="courses.html" class="nav-link">Courses</a></li>
+		            <li><a href="contact.html" class="nav-link">Contact</a></li>
+		        </ul>
+		    </div>
+		</div>
+	    </nav>
+	</header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container text-center">
+                <h1>Welcome to Web PK</h1>
+                <p>Professional Web Design & Development Solutions</p>
+                <a href="services.html" class="btn primary-btn">Explore Our Services</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services-preview" class="services">
+            <div class="container">
+                <h2 class="text-center">Our Services</h2>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <div class="icon">💻</div>
+                        <h5>Website Design & Development</h5>
+                    </div>
+                    <div class="service-item">
+                        <div class="icon">🎨</div>
+                        <h5>Logo Creation</h5>
+                    </div>
+                    <div class="service-item">
+                        <div class="icon">🌐</div>
+                        <h5>Domain Setup</h5>
+                    </div>
+                    <div class="service-item">
+                        <div class="icon">🎓</div>
+                        <h5>Web Design Courses</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coffee Feature Section -->
+        <section id="coffee-feature" class="coffee-feature">
+            <div class="container text-center">
+                <div class="icon">☕</div>
+                <h2>Enjoy a Coffee While We Discuss Your Project</h2>
+                <p>Visit our relaxing meeting room and let's chat about your web design needs over a cup of coffee!</p>
+                <a href="contact.html" class="btn primary-btn">Book a meeting</a>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2 class="text-center">What Our Clients Say</h2>
+                <div class="testimonials-grid">
+                    <blockquote>
+                        "The teaching and instruction are absolutely dynamic; they have the ability to break down and teach at a level suited to the student."
+                    </blockquote>
+                    <blockquote>
+                        "The idea of having a coffee in a lovely relaxing setting was exciting, but the manner and professionalism of their work made me want to tell all my friends."
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+	<footer class="footer">
+	    <div class="container footer-container">
+		<div class="footer-left">
+		    <a href="index.html" class="brand">Web PK</a>
+		    <p>&copy; 2024 Web PK. All rights reserved.</p>
+		</div>
+		<div class="footer-middle">
+		    <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">FAQ</a></li>
+		    </ul>
+		</div>
+		<div class="footer-right">
+		    <a href="#" class="social-link">Facebook</a>
+		    <a href="#" class="social-link">Twitter</a>
+		    <a href="#" class="social-link">Instagram</a>
+		</div>
+	    </div>
+	</footer>
+	    <!-- Floating Change Background Button -->
+    <button id="changeBgBtn" class="floating-btn" onclick="toggleBackground()">☰</button>
+    <script src="script.js"></script>
+</body>
+</html>
+

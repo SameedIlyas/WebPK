@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Web PK</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container navbar-container">
+                <a class="brand" href="index.html">Web PK</a>
+                <!-- Toggle Button for Mobile Menu -->
+                <button class="toggle-button" aria-label="Toggle Navigation" onclick="toggleMenu()">
+                    ☰
+                </button>
+                <!-- Navbar Links -->
+                <div class="navbar-links">
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="services.html" class="nav-link active">Services</a></li>
+                        <li><a href="courses.html" class="nav-link">Courses</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Services Section -->
+        <section id="services" class="section-padding">
+            <h2 class="section-title">Our Services</h2>
+            <div class="grid services-grid">
+                <div class="card service-card">
+                    <h5>Website Design & Development</h5>
+                    <p>Custom-built websites tailored to your specific needs and brand identity.</p>
+                </div>
+                <div class="card service-card">
+                    <h5>Logo Creation</h5>
+                    <p>Professional logo design to represent your brand effectively.</p>
+                </div>
+                <div class="card service-card">
+                    <h5>Domain Setup</h5>
+                    <p>Assistance in selecting and configuring the perfect domain for your business.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Service Addition -->
+        <section id="add-service" class="section-padding">
+            <h2 class="section-title">Add a Service</h2>
+            <form id="serviceForm">
+                <input type="text" id="serviceName" placeholder="Enter Service Name" required>
+                <input type="number" id="servicePrice" placeholder="Enter Price (USD)" required>
+                <input type="text" id="turnaroundTime" placeholder="Enter Turnaround Time (e.g., 2-4 weeks)" required>
+                <button type="submit" class="btn-primary">Add Service</button>
+            </form>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="section-padding">
+            <h2 class="section-title">Service Pricing</h2>
+            <table id ="pricingTable" class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Starting Price</th>
+                        <th>Turnaround Time</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Website Design & Development</td>
+                        <td>$1000</td>
+                        <td>2-4 weeks</td>
+                        <td><button class="btn-secondary remove-row">Remove</button></td>
+                    </tr>
+                    <tr>
+                        <td>Logo Creation</td>
+                        <td>$300</td>
+                        <td>1-2 weeks</td>
+                        <td><button class="btn-secondary remove-row">Remove</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="index.html" class="brand">Web PK</a>
+                <p>&copy; 2024 Web PK. All rights reserved.</p>
+            </div>
+            <div class="footer-middle">
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Change Background Button -->
+    <button id="changeBgBtn" class="floating-btn" onclick="toggleBackground()">☰</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

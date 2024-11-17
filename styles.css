@@ -1,0 +1,731 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f9f9f9;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #333;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background: #ffcc00;
+    color: #333;
+    transform: scale(1.05);
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Optional: limit container width */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.brand {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.navbar-links ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-links ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navbar-links ul li a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+.navbar-links ul li a.active {
+    background: #ffcc00;
+    color: #333;
+}
+
+/* Toggle Button */
+.toggle-button {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(to right, #333, #ffcc00);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero .btn {
+    margin-top: 1rem;
+}
+
+/* Services Section */
+#services-preview .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.service-item {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Coffee Feature Section */
+.coffee-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #ffcc00;
+    color: #333;
+    border-radius: 10px;
+    margin: 2rem 0;
+    min-height: 300px;
+    position: relative;
+}
+
+.coffee-feature .icon {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.coffee-feature h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.coffee-feature p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: 250px;
+}
+
+.coffee-feature button {
+    background: #333;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.coffee-feature button:hover {
+    background: white;
+    color: #333;
+    transform: scale(1.05);
+}
+
+/* Testimonials Section */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+blockquote {
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+blockquote:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Footer Styles */
+.footer {
+    background: #333;
+    color: white;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-middle {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+/* Footer Brand Section */
+.footer-left .brand {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.footer-left p {
+    margin: 0;
+    color: #ccc;
+}
+
+/* Footer Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* Social Links */
+.footer-right .social-link {
+    text-decoration: none;
+    color: white;
+    margin-left: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-right .social-link:first-child {
+    margin-left: 0;
+}
+
+.footer-right .social-link:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* Section Padding */
+.section-padding {
+    padding: 4rem 1rem;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Card Style */
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* General Styles for the Table */
+.pricing-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto; /* Center the table */
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* For mobile responsiveness */
+}
+
+.pricing-table thead {
+    background-color: #4CAF50; /* Green header */
+    color: white;
+    text-align: left;
+}
+
+.pricing-table th,
+.pricing-table td {
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    text-align: center; /* Center-align the content */
+}
+
+.pricing-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate row colors */
+}
+
+.pricing-table tbody tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+.pricing-table .btn-secondary {
+    background-color: #ff6347; /* Tomato red */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pricing-table .btn-secondary:hover {
+    background-color: #e55347;
+}
+
+
+/* General Styles for the Form */
+#serviceForm {
+    max-width: 500px;
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Style for Form Inputs */
+#serviceForm input[type="text"],
+#serviceForm input[type="number"] {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Style for the Submit Button */
+#serviceForm .btn-primary {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#serviceForm .btn-primary:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Section Styling for Better Visibility */
+#add-service {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#interactive {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#dynamicText {
+    font-size: 1.2rem;
+    margin: 0 auto;
+    color: #333;
+    max-width: 600px;
+}
+
+        /* Floating Button Styles */
+        .floating-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .floating-btn:hover {
+            background-color: #0056b3;
+        }
+        
+/* General Form Styling */
+form {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+}
+
+form h2.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#founder {
+    display: flex;
+    justify-content: center; /* Centers the contents horizontally */
+    align-items: center;     /* Centers the contents vertically */
+    text-align: center;      /* Centers the text */
+    flex-direction: column;  /* Stacks the image and text vertically */
+    padding: 2rem;           /* Optional padding */
+}
+
+/* Style for the founder-info container */
+.founder-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content horizontally */
+    text-align: center;
+}
+
+/* Image styling */
+.founder-photo {
+    max-width: 100%;    /* Ensures the image doesn't overflow */
+    height: auto;       /* Maintains aspect ratio */
+    margin-bottom: 1rem; /* Adds space below the image */
+}
+
+/*Error and success messages*/
+.error-messages p {
+    color: red;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    margin: 5px 0;
+}
+
+.success {
+    color: green;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.success-messages p {
+    color: green;
+    font-weight: bold;
+}
+
+/* Make the Table and serviceform Responsive */
+@media screen and (max-width: 768px) {
+    .pricing-table {
+        font-size: 0.9rem; /* Slightly smaller font for small screens */
+    }
+
+    .pricing-table thead {
+        display: none; /* Hide table header */
+    }
+
+    .pricing-table tbody tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .pricing-table tbody tr td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 16px;
+        border: none; /* Remove inner borders for mobile */
+        text-align: left;
+    }
+
+    .pricing-table tbody tr td::before {
+        content: attr(data-label); /* Add labels using data attributes */
+        font-weight: bold;
+        color: #4CAF50;
+        margin-right: 8px;
+    }
+    
+        #serviceForm {
+        padding: 15px;
+    }
+
+    #serviceForm input[type="text"],
+    #serviceForm input[type="number"] {
+        font-size: 0.9rem;
+    }
+
+    #serviceForm .btn-primary {
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        padding: 1rem 0;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .navbar-links ul li a {
+        padding: 1rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .toggle-button {
+        display: block;
+    }
+
+    .navbar-container {
+        flex-wrap: wrap;
+    }
+    
+     .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .footer-right .social-link {
+        margin-left: 0.5rem;
+    }
+}
+
+
+
+
+
